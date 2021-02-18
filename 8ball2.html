@@ -1,0 +1,143 @@
+<!DOCTYPE>
+
+<html>
+
+<head>
+
+<title>Magic 8 ball</title>
+
+<style>
+
+body{
+
+  background-color:#773CC2;
+
+}
+
+img{
+
+display: block;
+
+height: 250px;
+
+width: 250px;
+
+margin: 0 auto;
+
+}
+
+li {list-style-type: none;}
+
+.product-name {display: none;}
+
+@-webkit-keyframes shakyshaky {
+
+	0% { -webkit-transform: translate(2px, 1px) rotate(0deg); }
+
+	10% { -webkit-transform: translate(-1px, -2px) rotate(-1deg); }
+
+	20% { -webkit-transform: translate(-3px, 0px) rotate(1deg); }
+
+	30% { -webkit-transform: translate(0px, 2px) rotate(0deg); }
+
+	40% { -webkit-transform: translate(1px, -1px) rotate(1deg); }
+
+	50% { -webkit-transform: translate(-1px, 2px) rotate(-1deg); }
+
+	60% { -webkit-transform: translate(-3px, 1px) rotate(0deg); }
+
+	70% { -webkit-transform: translate(2px, 1px) rotate(-1deg); }
+
+	80% { -webkit-transform: translate(-1px, -1px) rotate(1deg); }
+
+	90% { -webkit-transform: translate(2px, 2px) rotate(0deg); }
+
+	100% { -webkit-transform: translate(1px, -2px) rotate(-1deg); }
+
+}
+
+.shake:hover,
+
+.shake:focus {
+
+	-webkit-animation-name: shakyshaky;
+
+	-webkit-animation-duration: 0.8s;
+
+	-webkit-transform-origin:50% 50%;
+
+	-webkit-animation-iteration-count: infinite;
+
+	-webkit-animation-timing-function: linear;
+
+}
+
+</style>
+
+
+
+</head>
+
+
+
+<body>
+
+<div class="category">
+
+<ul class="grid">                         
+
+<li class="item first">
+
+<a href="/pic1.html" title="PIC1" class="image" onmouseover="show_next();" id="show"><span><img src="https://raw.githubusercontent.com/brookehoareau/8ball/main/8ball1.png" width="243" height="243" id="image" class="shake" / ></span></a>
+
+<h2 class="product-name" ><a href="/pic1.html" title="PIC1-1"  id="show_2"><span id="name_image">PIC1</span></a></h2>
+
+</li>
+
+</ul>
+
+<script>
+
+var a=0;
+
+function show_next()
+
+{
+
+var imgg = new Array();
+
+imgg[0] = "https://raw.githubusercontent.com/brookehoareau/8ball/main/8ball1.png";
+
+imgg[1] = "https://raw.githubusercontent.com/brookehoareau/8ball/main/8ball2.png";
+
+imgg[2] = "https://raw.githubusercontent.com/brookehoareau/8ball/main/8ball3.png";
+
+if (a>imgg.length-1)
+
+{
+
+a=0;
+
+}
+
+document.getElementById("image").src=imgg[a];
+
+document.getElementById("show").title=imgg[a];
+
+document.getElementById("show").href=imgg[a];
+
+document.getElementById("show_2").href=imgg[a];
+
+document.getElementById("name_image").innerHTML=imgg[a];
+
+a=a+1;
+
+}
+
+</script>
+
+</body>
+
+
+
+</html>
